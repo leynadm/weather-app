@@ -1,9 +1,28 @@
-
-async function fetchWeatherDataJSON(){
-
-    const response = await fetch('http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=130589d71f758c19a3a8b6d6e7719a49',{mode:'cors'});
+async function fetchWeatherDataJSON() {
+  try {
+    const response = await fetch(
+        "http://api.openweathermap.org/data/2.5/weather?q=Hunedoara&APPID=130589d71f758c19a3a8b6d6e7719a49&units=metric",
+      { mode: "cors" }
+    );
     const weatherData = await response.json();
-    return weatherData
+    const myWeatherDetails = {
+      cityName: weatherData.name,
+      weatherCountry: weatherData.sys.country,
+      weatherHumidity: weatherData.main.humidity,
+      weatherType: weatherData.weather[0].main,
+      weatherDescription: weatherData.weather[0].description,
+      weatherTemperature: weatherData.main.temp,
+      weatherFeelsLike: weatherData.main.feels_like,
+      weatherPressure: weatherData.main.pressure,
+      visibility: weatherData.visibility,
+      windSpeed: weatherData.wind.speed,
+      clouds: weatherData.clouds.all,
+      weatherIcon: weatherData.weather[0].icon,
+    };
+    return myWeatherDetails;
+  } catch (error) {
+    console.log(`we failed ${error}`);
+  }
 }
 
-export default fetchWeatherDataJSON
+export default fetchWeatherDataJSON;

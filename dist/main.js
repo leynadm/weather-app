@@ -16,7 +16,7 @@
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\nasync function fetchWeatherDataJSON(){\n\n    const response = await fetch('http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=130589d71f758c19a3a8b6d6e7719a49',{mode:'cors'});\n    const weatherData = await response.json();\n    return weatherData\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (fetchWeatherDataJSON);\n\n//# sourceURL=webpack://weather-app/./src/fetch-weather.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nasync function fetchWeatherDataJSON() {\n  try {\n    const response = await fetch(\n        \"http://api.openweathermap.org/data/2.5/weather?q=Hunedoara&APPID=130589d71f758c19a3a8b6d6e7719a49&units=metric\",\n      { mode: \"cors\" }\n    );\n    const weatherData = await response.json();\n    const myWeatherDetails = {\n      cityName: weatherData.name,\n      weatherCountry: weatherData.sys.country,\n      weatherHumidity: weatherData.main.humidity,\n      weatherType: weatherData.weather[0].main,\n      weatherDescription: weatherData.weather[0].description,\n      weatherTemperature: weatherData.main.temp,\n      weatherFeelsLike: weatherData.main.feels_like,\n      weatherPressure: weatherData.main.pressure,\n      visibility: weatherData.visibility,\n      windSpeed: weatherData.wind.speed,\n      clouds: weatherData.clouds.all,\n      weatherIcon: weatherData.weather[0].icon,\n    };\n    return myWeatherDetails;\n  } catch (error) {\n    console.log(`we failed ${error}`);\n  }\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (fetchWeatherDataJSON);\n\n\n//# sourceURL=webpack://weather-app/./src/fetch-weather.js?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _fetch_weather__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./fetch-weather */ \"./src/fetch-weather.js\");\n\n\nconst data = (0,_fetch_weather__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\nconsole.log(data)\n\nfetch(\n  \"http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=130589d71f758c19a3a8b6d6e7719a49\",\n  { mode: \"cors\" }\n)\n  .then((response) => response.json())\n  .then((response) => {\n    console.log(response);\n  })\n  .catch((error) => {\n        console.log(error)\n});\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _fetch_weather__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./fetch-weather */ \"./src/fetch-weather.js\");\n\n\n\nconst myWeatherData = async() => {\n  const objWeatherData = await (0,_fetch_weather__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n  console.log(objWeatherData)\n  return objWeatherData   \n}\n\nmyWeatherData()\n\n\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
 
 /***/ })
 
