@@ -6,10 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What's the weather like</title>
     <script src="main.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    
     <div class="container">
         
+        <div class="left-side">
+
+            <div class="location">
+                <div class="city"></div>
+                <div class="country"></div>
+            </div>
+
+            <div class="weather-overview">
+                <div class="weather-description"></div>
+                <img src="" class="weather-icon" alt="">
+            </div>
+            
+            <div class="current-time"></div>
+
+            <div class="temperature"></div>
+
+            <div class="feels-like"></div>
+
+        </div>
+        
+        <div class="right-side">
+
+            <div class="humidity"></div>
+
+            <div class="weather-pressure"></div>
+
+            <div class="wind-speed"></div>
+ 
+            <div class="visibility"></div>
+        
+        </div>
+        
+        <div class="bottom-side">
+
+        <label for="city-search-box">Search for a city...</label>
+        <input type="text" name="city-search-box" id="city-search-box">
+        
+        </div>
+        
     </div>
+
 </body>
 </html>
