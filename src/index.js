@@ -12,7 +12,7 @@ const myWeatherData = async () => {
   getDom().feelsLike.textContent = objWeatherData.weatherFeelsLike;
   getDom().humidity.textContent = objWeatherData.weatherHumidity;
   getDom().pressure.textContent = objWeatherData.weatherPressure;
-  getDom().windSpeed.textContent = objWeatherData.weatherWindSpeed;
+  getDom().windSpeed.textContent = `${objWeatherData.weatherWindSpeed  } km`;
   getDom().visibility.textContent = objWeatherData.weatherVisibility;
 
   console.log(objWeatherData);
