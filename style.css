@@ -87,3 +87,23 @@ body{
 .search-container{
 	display: flex;
 }
+
+.search-button{
+	margin-left: 1rem;
+}
+
+#city-search-box{
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+input{
+	outline: 0;
+    border-width: 0 0 1px;
+    border-color: black;
+    background: transparent;
+}
+
+.city{
+	font-size: 2rem;
+}
