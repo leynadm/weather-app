@@ -1,21 +1,31 @@
 import fetchWeatherDataJSON from "./fetch-weather";
 import getDom from "./DOM-manipulation";
+import getUserInput from "./get-user-input";
 
-const myWeatherData = async () => {
-  const objWeatherData = await fetchWeatherDataJSON();
+
+const myWeatherData = async (cityToQuery) => {
+  const objWeatherData = await fetchWeatherDataJSON(cityToQuery);
 
   getDom().city.textContent = objWeatherData.weatherCityName;
   getDom().country.textContent = objWeatherData.weatherCountry;
   getDom().weatherDescription.textContent = objWeatherData.weatherDescription;
   getDom().weatherIcon.src = `https://openweathermap.org/img/wn/${  objWeatherData.weatherIcon  }@2x.png`
-  getDom().temperature.textContent = objWeatherData.weatherTemperature;
+  getDom().temperature.textContent = `${objWeatherData.weatherTemperature  }°C`;
   getDom().feelsLike.textContent = objWeatherData.weatherFeelsLike;
   getDom().humidity.textContent = objWeatherData.weatherHumidity;
   getDom().pressure.textContent = objWeatherData.weatherPressure;
   getDom().windSpeed.textContent = `${objWeatherData.weatherWindSpeed  } km`;
   getDom().visibility.textContent = objWeatherData.weatherVisibility;
 
-  console.log(objWeatherData);
 };
 
-myWeatherData();
+
+
+getDom().searchButton.addEventListener('click',queryAndDisplayData)
+
+function queryAndDisplayData(){
+  const cityToQuery = getUserInput()
+  myWeatherData(cityToQuery);
+}
+
+queryAndDisplayData();

@@ -10,7 +10,7 @@ function getDom() {
   const pressure = document.querySelector(".weather-pressure");
   const windSpeed = document.querySelector(".wind-speed");
   const visibility = document.querySelector(".visibility");
-  const citySearchBox = document.querySelector(".city-search-box");
+  const searchButton = document.querySelector('.search-button')
 
   return {
     city,
@@ -24,8 +24,9 @@ function getDom() {
     pressure,
     windSpeed,
     visibility,
-    citySearchBox,
+    searchButton
   };
+  
 }
 
 export default getDom
