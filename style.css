@@ -44,9 +44,10 @@ body{
 .left-side{
 	padding: 1rem;
 	background: rgba(0,0,139,0.45);
-	border-top-left-radius: 4px;
 	border-bottom-left-radius: 4px;
+	border-top-left-radius: 4px;
 }
+
 
 .right-side{
 	padding: 1rem;
