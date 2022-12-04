@@ -1,6 +1,7 @@
 import fetchWeatherDataJSON from "./fetch-weather";
 import getDom from "./DOM-manipulation";
 import getUserInput from "./get-user-input";
+import backgroundAdjuster from "./background-adjuster";
 
 
 const myWeatherData = async (cityToQuery) => {
@@ -16,6 +17,8 @@ const myWeatherData = async (cityToQuery) => {
   getDom().pressure.textContent = objWeatherData.weatherPressure;
   getDom().windSpeed.textContent = `${objWeatherData.weatherWindSpeed  } km`;
   getDom().visibility.textContent = objWeatherData.weatherVisibility;
+
+  backgroundAdjuster(objWeatherData.weatherType,objWeatherData.weatherTemperature)
 
 };
 

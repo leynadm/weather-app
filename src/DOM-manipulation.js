@@ -11,7 +11,8 @@ function getDom() {
   const windSpeed = document.querySelector(".wind-speed");
   const visibility = document.querySelector(".visibility");
   const searchButton = document.querySelector('.search-button')
-
+  const backgroundImage = document.querySelector("html");
+  
   return {
     city,
     country,
@@ -24,7 +25,8 @@ function getDom() {
     pressure,
     windSpeed,
     visibility,
-    searchButton
+    searchButton,
+    backgroundImage
   };
   
 }
