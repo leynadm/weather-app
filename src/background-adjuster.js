@@ -54,6 +54,10 @@ function backgroundAdjuster(typeOfWeather, temperature) {
       getDom().backgroundImage.style.backgroundImage =
         "url(/src/images/clouds.jpg)";
       break;
+    case "Rain":
+      getDom().backgroundImage.style.backgroundImage =
+        "url(/src/images/rain-light-rain.jpg"
+        break;
   }
 }
 
