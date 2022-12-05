@@ -22,6 +22,7 @@ async function fetchWeatherDataJSON(city, measurementSystem) {
       weatherIcon: weatherData.weather[0].icon,
     };
 
+    
     return myWeatherDetails;
   } catch (error) {
     console.log(`we failed ${error}`);
