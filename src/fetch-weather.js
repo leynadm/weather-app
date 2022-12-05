@@ -4,6 +4,8 @@ async function fetchWeatherDataJSON(city, measurementSystem) {
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=130589d71f758c19a3a8b6d6e7719a49&units=${measurementSystem}`,
       { mode: "cors" }
     );
+    console.log("logging in response after fetching");
+    console.log(response);
     const weatherData = await response.json();
     const myWeatherDetails = {
       weatherCityName: weatherData.name,
