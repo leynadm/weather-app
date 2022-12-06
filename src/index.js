@@ -14,11 +14,12 @@ const myWeatherData = async (cityToQuery,systemToUse) => {
   } else {
     tempToUse = "°F"
   }
-  
+  const currentDate = new Date()
   getDom().city.textContent = objWeatherData.weatherCityName;
   getDom().country.textContent = objWeatherData.weatherCountry;
   getDom().weatherDescription.textContent = objWeatherData.weatherDescription;
   getDom().weatherIcon.src = `https://openweathermap.org/img/wn/${  objWeatherData.weatherIcon  }@2x.png`
+  getDom().currentTime.textContent = currentDate.toLocaleString()
   getDom().temperature.textContent = Math.ceil(objWeatherData.weatherTemperature) + tempToUse;
   getDom().feelsLike.textContent = objWeatherData.weatherFeelsLike + tempToUse;
   getDom().humidity.textContent = `${objWeatherData.weatherHumidity  } %`;
