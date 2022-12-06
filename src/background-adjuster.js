@@ -5,51 +5,51 @@ function backgroundAdjuster(typeOfWeather, temperature) {
   switch (typeOfWeather) {
     case "Snow":
       getDom().backgroundImage.style.backgroundImage =
-        "url(/src/images/snow.jpg)";
+        "url(images/snow.jpg)";
       break;
     case "Mist":
       getDom().backgroundImage.style.backgroundImage =
-        "url(/src/images/mist.jpg)";
+        "url(images/mist.jpg)";
       break;
     case "Smoke":
       getDom().backgroundImage.style.backgroundImage =
-        "url(/src/images/smoke.jpg)";
+        "url(images/smoke.jpg)";
       break;
     case "Haze":
       getDom().backgroundImage.style.backgroundImage =
-        "url(/src/images/haze.jpg)";
+        "url(images/haze.jpg)";
       break;
     case "Dust":
       getDom().backgroundImage.style.backgroundImage =
-        "url(/src/images/dust.jpg)";
+        "url(images/dust.jpg)";
       break;
     case "Fog":
       getDom().backgroundImage.style.backgroundImage =
-        "url(/src/images/fog.jpg)";
+        "url(images/fog.jpg)";
       break;
     case "Sand":
       getDom().backgroundImage.style.backgroundImage =
-        "url(/src/images/sand.jpg)";
+        "url(images/sand.jpg)";
       break;
     case "Ash":
       getDom().backgroundImage.style.backgroundImage =
-        "url(/src/images/ash.jpg)";
+        "url(images/ash.jpg)";
       break;
     case "Squall":
       getDom().backgroundImage.style.backgroundImage =
-        "url(/src/images/squall.jpg)";
+        "url(images/squall.jpg)";
       break;
     case "Tornado":
       getDom().backgroundImage.style.backgroundImage =
-        "url(/src/images/tornado.jpg)";
+        "url(images/tornado.jpg)";
       break;
     case "Clear":
       getDom().backgroundImage.style.backgroundImage =
-        "url(/src/images/clear.jpg)";
+        "url(images/clear.jpg)";
       break;
     case "Clouds":
       getDom().backgroundImage.style.backgroundImage =
-        "url(/src/images/clouds.jpg)";
+        "url(images/clouds.jpg)";
       break;
   }
 }

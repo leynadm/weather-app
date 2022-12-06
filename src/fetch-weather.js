@@ -1,3 +1,4 @@
+// eslint-disable-next-line consistent-return
 async function fetchWeatherDataJSON(city,systemToUse) {
   try {
     const response = await fetch(
@@ -22,8 +23,10 @@ async function fetchWeatherDataJSON(city,systemToUse) {
     };
 
     return myWeatherDetails;
+
   } catch (error) {
     console.log(`we failed ${error}`);
+    // eslint-disable-next-line no-alert
     alert(`You added ${  city  } and this is not a city we could found`)
   }
 }
