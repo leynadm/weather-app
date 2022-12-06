@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Kalam&family=Saira+Condensed&family=Shadows+Into+Light&family=Source+Code+Pro&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html{
+	background-image: url('');
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+}
+
+body{
+	font-family: 'Source Code Pro', monospace;
+	font-size: large;
+}
+
+.container{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding: 1rem;
+}
+
+.left-side{
+	padding: 1rem;
+	background: rgba(112,128,144,0.45);
+	border-radius: 3px;
+}
+
+.right-side{
+	padding: 1rem;
+	background: rgba(112,128,144,0.45);
+	border-radius: 3px;	
+	display: flex;
+	flex-direction: column;
+	justify-items:flex-start;
+	text-align: right;
+}	
+
+.weather-icon{
+	width: 5rem;
+}
+
+.bottom-side {
+	padding: 1rem;
+	display: grid;
+	grid-column: 1/3;
+	justify-content: center;
+	justify-items: center;
+}
+
+.stat-container{
+	padding: 0.25rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.stat-icon{
+	margin-right: 1rem;
+}
+
+.stat-overview{
+	display: flex;
+}
+
+.search-container{
+	display: flex;
+}
+
+.search-button{
+	margin-left: 1rem;
+}
+
+#city-search-box{
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+input{
+	outline: 0;
+    border-width: 0 0 1px;
+    border-color: black;
+    background: transparent;
+}
+
+.city{
+	font-size: 2rem;
+}
+
+.toggle {
+    --width: 50px;
+    --height: calc(var(--width)/2);
+    --border-radius: calc(var(--height)/2);
+
+    display: inline-block;
+    cursor: pointer;
+}
+
+.toggle__input:checked ~ .toggle__fill {
+    background-color: #009578;
+}
+
+.toggle__input {
+    display: none;
+}
+
+.toggle__fill {
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+    border-radius: var(--border-radius);
+    background:grey;
+    transition: background 0.2s;
+}
+
+.toggle__fill::after{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    height: var(--height);
+    width: var(--height);
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25); 
+    border-radius: var(--border-radius);
+    transition: transform 0.2s;
+}
+
+.toggle__input:checked ~ .toggle__fill::after {
+    transform: translateX(var(--height));
+}
