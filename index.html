@@ -80,13 +80,22 @@
 
             <div class="search-container">
                 <input type="text" name="city-search-box" id="city-search-box" placeholder="Search for a city..." value="Barcelona">
-                <button type="button" class="search-button material-symbols-outlined">refresh</button>
             </div>
 
-            <label class="toggle">°C or °F
-                <input type="checkbox" class="toggle__input" name="celsius-or-fahrenheit" id="celsius-or-fahrenheit" required>
-                <div class="toggle__fill" tabindex="1"></div>
-            </label>
+            <div class="toggle-container">
+
+                <label class="toggle">
+                    <input type="checkbox" class="toggle__input" name="celsius-or-fahrenheit" id="celsius-or-fahrenheit" required>
+                    <div class="toggle__fill" tabindex="1"></div>
+                </label>
+
+                <div class="measurement-system">°C</div>
+
+                <button type="button" class="search-button material-symbols-outlined">refresh</button>
+        
+            </div>
+
+
         </div>
         
     </div>
