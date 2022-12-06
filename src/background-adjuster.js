@@ -1,10 +1,7 @@
 import getDom from "./DOM-manipulation";
 
 function backgroundAdjuster(typeOfWeather, temperature) {
-  console.log(temperature);
-  console.log(temperature > 0);
-  console.log(temperature < 0);
-    console.log(typeOfWeather);
+ console.log(typeOfWeather)
   switch (typeOfWeather) {
     case "Snow":
       getDom().backgroundImage.style.backgroundImage =

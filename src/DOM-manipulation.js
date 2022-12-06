@@ -12,7 +12,9 @@ function getDom() {
   const visibility = document.querySelector(".visibility");
   const searchButton = document.querySelector('.search-button')
   const backgroundImage = document.querySelector("html");
-  
+  const measurementSystem = document.querySelector(".measurement-system");
+  const measurementToggle = document.querySelector(".toggle__input")
+
   return {
     city,
     country,
@@ -26,7 +28,9 @@ function getDom() {
     windSpeed,
     visibility,
     searchButton,
-    backgroundImage
+    backgroundImage,
+    measurementSystem,
+    measurementToggle 
   };
   
 }

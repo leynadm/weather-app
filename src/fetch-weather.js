@@ -1,7 +1,7 @@
-async function fetchWeatherDataJSON(city) {
+async function fetchWeatherDataJSON(city,systemToUse) {
   try {
     const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${  city  }&APPID=130589d71f758c19a3a8b6d6e7719a49&units=metric`,
+        `https://api.openweathermap.org/data/2.5/weather?q=${  city  }&APPID=130589d71f758c19a3a8b6d6e7719a49&units=${systemToUse}`,
       { mode: "cors" }
     );
     
@@ -24,6 +24,7 @@ async function fetchWeatherDataJSON(city) {
     return myWeatherDetails;
   } catch (error) {
     console.log(`we failed ${error}`);
+    alert(`You added ${  city  } and this is not a city we could found`)
   }
 }
 
