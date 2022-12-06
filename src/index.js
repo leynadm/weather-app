@@ -1,4 +1,3 @@
-import { get } from "lodash";
 import fetchWeatherDataJSON from "./fetch-weather";
 import getDom from "./DOM-manipulation";
 import getUserInput from "./get-user-input";
@@ -51,6 +50,7 @@ function setMeasurementSystem(){
 }
 
 
+// eslint-disable-next-line no-use-before-define
 getDom().searchButton.addEventListener('click',queryAndDisplayData)
 getDom().measurementToggle.addEventListener('click',setMeasurementSystem)
 
